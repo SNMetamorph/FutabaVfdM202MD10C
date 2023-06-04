@@ -1,0 +1,55 @@
+#######################################
+# Syntax Coloring Map For FutabaVfdM202MD10C
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1, LITERAL1)
+#######################################
+FutabaVfdM202MD10C	    KEYWORD1
+Dimming                 LITERAL1
+CodePage                LITERAL1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+initialize	        KEYWORD2
+clear	            KEYWORD2
+backspace           KEYWORD2
+cursorHomePos	    KEYWORD2
+cursorSetPos	    KEYWORD2
+setDimming	        KEYWORD2
+runSelfTest	        KEYWORD2
+toggleCursor	    KEYWORD2
+defineUserCharacter	KEYWORD2
+setCodePage         KEYWORD2
+defineUserCharacter KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+UserChar1           LITERAL1
+UserChar2           LITERAL1
+UserChar3           LITERAL1
+UserChar4           LITERAL1
+UserChar5           LITERAL1
+UserChar6           LITERAL1
+UserChar7           LITERAL1
+UserChar8           LITERAL1
+UserChar9           LITERAL1
+CodePage0           LITERAL1
+CodePage2           LITERAL1
+CodePage3           LITERAL1
+CodePage4           LITERAL1
+CodePage6           LITERAL1
+CodePage7           LITERAL1
+CodePage8           LITERAL1
+CodePage11          LITERAL1
+CP897               LITERAL1
+CP857               LITERAL1
+CP866               LITERAL1
+CP437               LITERAL1
+Minimum             LITERAL1
+Medium              LITERAL1
+BelowMedium         LITERAL1
+Maximum             LITERAL1
