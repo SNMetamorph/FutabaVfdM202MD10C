@@ -72,6 +72,7 @@ public:
 
     void initialize(Stream& stream);
     void clear();
+    void reset();
     void backspace();
     void cursorHomePos();
     void cursorSetPos(int x, int y);

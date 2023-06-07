@@ -60,7 +60,7 @@ void FutabaVfdM202MD10C::initialize(Stream& stream)
     toggleExtendedMode(true);
 }
 
-void FutabaVfdM202MD10C::clear()
+void FutabaVfdM202MD10C::reset()
 {
     m_pStream->write(ProtocolCommands::Reset);
     toggleExtendedMode(true);

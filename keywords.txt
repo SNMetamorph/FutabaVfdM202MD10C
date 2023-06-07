@@ -15,6 +15,7 @@ CodePage                LITERAL1
 
 initialize	        KEYWORD2
 clear	            KEYWORD2
+reset               KEYWORD2
 backspace           KEYWORD2
 cursorHomePos	    KEYWORD2
 cursorSetPos	    KEYWORD2
