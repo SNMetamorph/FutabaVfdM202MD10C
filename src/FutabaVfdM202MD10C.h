@@ -45,18 +45,18 @@ public:
     };
 
     enum class CodePage {
-        CodePage0 = 0x0, // ??
+        Default = 0x0,
         CP897 = 0x1, // Japanese
-        CodePage2 = 0x2, // ??
-        CodePage3 = 0x3, // ??
-        CodePage4 = 0x4, // ??
+        CP850 = 0x2, // French, German, Portuguese, Spanish
+        CP852 = 0x3, // Czech, Slovak, Polish, Hungarian, Slovene, Croatian, Romanian, Albanian
+        CP855 = 0x4, // Belarusian, Bosnian, Bulgarian, Macedonian, Serbian, Ukrainian, Kazakh, Kyrgyz, Mold
         CP857 = 0x5, // Turkish
-        CodePage6 = 0x6, // ??
-        CodePage7 = 0x7, // ??
-        CodePage8 = 0x8, // ??
-        CP437 = 0x9, // ??
+        CP862 = 0x6, // Hebrew
+        CP863 = 0x7, // French Canadian
+        CP864 = 0x8, // Arabic
+        CP437 = 0x9, // Western European languages, Greek
         CP866 = 0xA, // Russian
-        CodePage11 = 0xB, // ??
+        CP869 = 0xB, // Greek
     };
 
     enum class Dimming
