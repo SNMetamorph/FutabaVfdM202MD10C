@@ -60,6 +60,15 @@ void FutabaVfdM202MD10C::initialize(Stream& stream)
     toggleExtendedMode(true);
 }
 
+void FutabaVfdM202MD10C::clear()
+{
+    for (int i = 0; i < 40; i++) {
+       m_pStream->write(ProtocolCommands::Backspace); 
+    }
+    m_pStream->write(ProtocolCommands::DisplayPosition);
+    m_pStream->write(static_cast<uint8_t>(0x0));
+}
+
 void FutabaVfdM202MD10C::reset()
 {
     m_pStream->write(ProtocolCommands::Reset);
