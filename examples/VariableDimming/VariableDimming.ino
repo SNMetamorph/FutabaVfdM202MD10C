@@ -7,7 +7,7 @@ SoftwareSerial softSerial(2, 3, true); // display DATA should be connected to pi
 void setup() {
     softSerial.begin(9600);
     display.initialize(softSerial);
-    display.clear();
+    display.reset();
     display.cursorSetPos(0, 0);
     display.print("This display can");
     display.cursorSetPos(0, 1);

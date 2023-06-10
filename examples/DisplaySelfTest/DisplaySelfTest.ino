@@ -7,14 +7,14 @@ SoftwareSerial softSerial(2, 3, true); // display DATA should be connected to pi
 void setup() {
     softSerial.begin(9600);
     display.initialize(softSerial);
-    display.clear();
+    display.reset();
 }
 
 void loop() {
     display.clear();
     display.print("Self-test after... ");
 
-    for (int i = 3; i >= 0; i--) {
+    for (int i = 3; i > 0; i--) {
         display.print(i, DEC);
         delay(1000);
         display.backspace();

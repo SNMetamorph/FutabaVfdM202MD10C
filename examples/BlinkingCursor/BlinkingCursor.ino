@@ -8,7 +8,7 @@ bool dimmingStatus = true;
 void setup() {
     softSerial.begin(9600);
     display.initialize(softSerial);
-    display.clear();
+    display.reset();
     display.print("Wake up, Neo...");
 }
 
