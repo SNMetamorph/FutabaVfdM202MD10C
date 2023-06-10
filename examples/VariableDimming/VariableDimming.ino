@@ -18,7 +18,7 @@ void loop() {
     constexpr FutabaVfdM202MD10C::Dimming levels[4] = { 
         FutabaVfdM202MD10C::Dimming::Minimum, 
         FutabaVfdM202MD10C::Dimming::Medium, 
-        FutabaVfdM202MD10C::Dimming::BelowMedium,
+        FutabaVfdM202MD10C::Dimming::AboveMedium,
         FutabaVfdM202MD10C::Dimming::Maximum 
     };
     

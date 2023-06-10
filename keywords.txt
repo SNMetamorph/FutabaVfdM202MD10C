@@ -52,5 +52,5 @@ CP866               LITERAL1
 CP869               LITERAL1
 Minimum             LITERAL1
 Medium              LITERAL1
-BelowMedium         LITERAL1
+AboveMedium         LITERAL1
 Maximum             LITERAL1

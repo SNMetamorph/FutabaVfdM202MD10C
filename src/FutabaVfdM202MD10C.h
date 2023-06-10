@@ -63,7 +63,7 @@ public:
     {
         Minimum = 0x20,
         Medium = 0x40,
-        BelowMedium = 0x60,
+        AboveMedium = 0x60,
         Maximum = 0xFF
     };
 
