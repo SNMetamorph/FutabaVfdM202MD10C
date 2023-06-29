@@ -21,5 +21,4 @@ void loop() {
     }
     
     display.runSelfTest();
-    delay(8000);
 }

@@ -98,10 +98,15 @@ void FutabaVfdM202MD10C::setDimming(Dimming level)
     m_pStream->write(static_cast<uint8_t>(level));
 }
 
-void FutabaVfdM202MD10C::runSelfTest()
+void FutabaVfdM202MD10C::runSelfTest(bool waitUntilEnd)
 {
     m_pStream->write(ProtocolCommands::SelfTest);
     toggleExtendedMode(true);
+    if (waitUntilEnd) {
+        // display is unavailable during self-test, so maybe we want to wait
+        // until display testing will be finished
+        delay(8000);
+    }
 }
 
 void FutabaVfdM202MD10C::toggleCursor(bool status)

@@ -77,7 +77,7 @@ public:
     void cursorHomePos();
     void cursorSetPos(int x, int y);
     void setDimming(Dimming level);
-    void runSelfTest();
+    void runSelfTest(bool waitUntilEnd = true);
     void toggleCursor(bool status);
     void setCodePage(CodePage page);
     void defineUserCharacter(Character charNumber, const uint8_t data[7]);
