@@ -4,13 +4,14 @@ Library for Arduino framework for convenient working with Futaba M202MD10C displ
 ## Supported features
 - Cursor positioning
 - Cursor visibility toggle
+- Text vertical scrolling toggle
 - Brightness dimming (4 levels available)
 - Display self-test mode triggering
 - Code pages switching (12 available)
 - User-definable symbols (9 available)
 
 ## Usage example
-There is available 6 different example sketches in `/examples`, this is one of them:
+There is available several different example sketches in `/examples`, this is one of them:
 ```c++
 #include <FutabaVfdM202MD10C.h>
 #include <SoftwareSerial.h>
