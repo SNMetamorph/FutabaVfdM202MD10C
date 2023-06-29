@@ -36,8 +36,8 @@ enum ProtocolCommands
     Backspace = 0x8,
     SelfTest = 0xF,
     DisplayPosition = 0x10,
-    NormalDisplayMode = 0x11,
-    VerticalScrollMode = 0x12,
+    DisableVerticalScroll = 0x11,
+    EnableVerticalScroll = 0x12,
     CursorOn = 0x13,
     CursorOff = 0x14,
     Reset = 0x1F
@@ -118,6 +118,11 @@ void FutabaVfdM202MD10C::setCodePage(CodePage page)
 {
     m_pStream->write(ProtocolCommands::SelectCodePage);
     m_pStream->write(static_cast<uint8_t>(page));
+}
+
+void FutabaVfdM202MD10C::toggleVerticalScroll(bool status)
+{
+    m_pStream->write(status ? ProtocolCommands::EnableVerticalScroll : ProtocolCommands::DisableVerticalScroll);
 }
 
 void FutabaVfdM202MD10C::defineUserCharacter(Character charNumber, const uint8_t data[7])

@@ -32,7 +32,8 @@ SOFTWARE.
 class FutabaVfdM202MD10C : public Print
 {
 public:    
-    enum Character {
+    enum Character 
+    {
         UserChar1 = 0x15,
         UserChar2 = 0x16,
         UserChar3 = 0x17,
@@ -44,7 +45,8 @@ public:
         UserChar9 = 0x1E,
     };
 
-    enum class CodePage {
+    enum class CodePage 
+    {
         Default = 0x0,
         CP897 = 0x1, // Japanese
         CP850 = 0x2, // French, German, Portuguese, Spanish
@@ -80,6 +82,7 @@ public:
     void runSelfTest(bool waitUntilEnd = true);
     void toggleCursor(bool status);
     void setCodePage(CodePage page);
+    void toggleVerticalScroll(bool status);
     void defineUserCharacter(Character charNumber, const uint8_t data[7]);
     
 private:

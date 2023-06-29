@@ -13,18 +13,19 @@ CodePage                LITERAL1
 # Methods and Functions (KEYWORD2)
 #######################################
 
-initialize	        KEYWORD2
-clear	            KEYWORD2
-reset               KEYWORD2
-backspace           KEYWORD2
-cursorHomePos	    KEYWORD2
-cursorSetPos	    KEYWORD2
-setDimming	        KEYWORD2
-runSelfTest	        KEYWORD2
-toggleCursor	    KEYWORD2
-defineUserCharacter	KEYWORD2
-setCodePage         KEYWORD2
-defineUserCharacter KEYWORD2
+initialize	            KEYWORD2
+clear	                KEYWORD2
+reset                   KEYWORD2
+backspace               KEYWORD2
+cursorHomePos	        KEYWORD2
+cursorSetPos	        KEYWORD2
+setDimming	            KEYWORD2
+runSelfTest	            KEYWORD2
+toggleCursor	        KEYWORD2
+defineUserCharacter	    KEYWORD2
+setCodePage             KEYWORD2
+toggleVerticalScroll    KEYWORD2
+defineUserCharacter     KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
