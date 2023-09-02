@@ -33,6 +33,7 @@ enum ProtocolCommands
     SelectCodePage = 0x2,
     DefineCharacter = 0x3,
     DimmingMode = 0x4,
+    PrintTickerText = 0x5,
     Backspace = 0x8,
     SelfTest = 0xF,
     DisplayPosition = 0x10,
@@ -122,6 +123,16 @@ void FutabaVfdM202MD10C::setCodePage(CodePage page)
 void FutabaVfdM202MD10C::toggleVerticalScroll(bool status)
 {
     m_pStream->write(status ? ProtocolCommands::EnableVerticalScroll : ProtocolCommands::DisableVerticalScroll);
+}
+
+void FutabaVfdM202MD10C::beginTickerText()
+{
+    m_pStream->write(ProtocolCommands::PrintTickerText);
+}
+
+void FutabaVfdM202MD10C::endTickerText()
+{
+    m_pStream->write('\r');
 }
 
 void FutabaVfdM202MD10C::defineUserCharacter(Character charNumber, const uint8_t data[7])

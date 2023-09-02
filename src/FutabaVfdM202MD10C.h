@@ -83,6 +83,8 @@ public:
     void toggleCursor(bool status);
     void setCodePage(CodePage page);
     void toggleVerticalScroll(bool status);
+    void beginTickerText();
+    void endTickerText();
     void defineUserCharacter(Character charNumber, const uint8_t data[7]);
     
 private:

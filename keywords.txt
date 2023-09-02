@@ -25,6 +25,8 @@ toggleCursor	        KEYWORD2
 defineUserCharacter	    KEYWORD2
 setCodePage             KEYWORD2
 toggleVerticalScroll    KEYWORD2
+beginTickerText         KEYWORD2
+endTickerText           KEYWORD2
 defineUserCharacter     KEYWORD2
 
 #######################################

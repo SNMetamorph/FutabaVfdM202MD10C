@@ -1,5 +1,5 @@
 # FutabaVfdM202MD10C
-Library for Arduino framework for convenient working with Futaba M202MD10C display. 
+Library for Arduino framework for convenient working with vacuum fluorescent displays (VFD) based on Futaba M202MD10C board. 
 
 ## Supported features
 - Cursor positioning
@@ -9,9 +9,10 @@ Library for Arduino framework for convenient working with Futaba M202MD10C displ
 - Display self-test mode triggering
 - Code pages switching (12 available)
 - User-definable symbols (9 available)
+- Internal buffer for ticker text (45 symbols maximum)
 
 ## Usage example
-There is available several different example sketches in `/examples`, this is one of them:
+There are several different example sketches available in `/examples`, this is one of them:
 ```c++
 #include <FutabaVfdM202MD10C.h>
 #include <SoftwareSerial.h>
@@ -35,4 +36,4 @@ void loop() {
 ```
 
 ## Credits
-My thanks to `abomin` for discovering about display "extended" mode and user characters defining & usage.
+My thanks to `abomin` for discovering about display "extended" mode and user characters defining.
