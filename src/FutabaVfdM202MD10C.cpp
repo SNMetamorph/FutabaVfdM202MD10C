@@ -62,9 +62,8 @@ void FutabaVfdM202MD10C::initialize(Stream& stream)
 
 void FutabaVfdM202MD10C::clear()
 {
-    for (int i = 0; i < 40; i++) {
-       m_pStream->write(ProtocolCommands::Backspace); 
-    }
+    m_pStream->write('\n');
+    m_pStream->write('\n');
     m_pStream->write(ProtocolCommands::DisplayPosition);
     m_pStream->write(static_cast<uint8_t>(0x0));
 }
