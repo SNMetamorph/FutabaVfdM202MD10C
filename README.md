@@ -1,4 +1,9 @@
 # FutabaVfdM202MD10C
+[![PlatformIO Registry](https://badges.registry.platformio.org/packages/snmetamorph/library/FutabaVfdM202MD10C.svg)](https://registry.platformio.org/libraries/snmetamorph/FutabaVfdM202MD10C)
+![GitHub repo size](https://img.shields.io/github/repo-size/SNMetamorph/FutabaVfdM202MD10C)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/SNMetamorph/FutabaVfdM202MD10C/master)
+![GitHub license](https://img.shields.io/github/license/SNMetamorph/FutabaVfdM202MD10C)
+
 Library for Arduino framework for convenient working with vacuum fluorescent displays (VFD) based on Futaba M202MD10C board. 
 
 ## Supported features
