@@ -88,9 +88,11 @@ public:
     void defineUserCharacter(Character charNumber, const uint8_t data[7]);
     
 private:
+    void resetLocalDisplayState();
     void toggleExtendedMode(bool status);
 
     Stream *m_pStream;
+    bool m_bVerticalScroll;
 };
 
 #endif // _FUTABA_VFD_M202MD10C_H

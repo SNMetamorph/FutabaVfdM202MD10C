@@ -47,6 +47,7 @@ enum ProtocolCommands
 FutabaVfdM202MD10C::FutabaVfdM202MD10C()
 {
     m_pStream = nullptr;
+    resetLocalDisplayState();
 }
 
 size_t FutabaVfdM202MD10C::write(uint8_t character)
@@ -63,15 +64,22 @@ void FutabaVfdM202MD10C::initialize(Stream& stream)
 
 void FutabaVfdM202MD10C::clear()
 {
+    if (!m_bVerticalScroll) {
+        m_pStream->write(ProtocolCommands::EnableVerticalScroll);
+    }
     m_pStream->write('\n');
     m_pStream->write('\n');
     m_pStream->write(ProtocolCommands::DisplayPosition);
     m_pStream->write(static_cast<uint8_t>(0x0));
+    if (!m_bVerticalScroll) {
+        m_pStream->write(ProtocolCommands::DisableVerticalScroll);
+    }
 }
 
 void FutabaVfdM202MD10C::reset()
 {
     m_pStream->write(ProtocolCommands::Reset);
+    resetLocalDisplayState();
     toggleExtendedMode(true);
 }
 
@@ -122,6 +130,7 @@ void FutabaVfdM202MD10C::setCodePage(CodePage page)
 
 void FutabaVfdM202MD10C::toggleVerticalScroll(bool status)
 {
+    m_bVerticalScroll = status;
     m_pStream->write(status ? ProtocolCommands::EnableVerticalScroll : ProtocolCommands::DisableVerticalScroll);
 }
 
@@ -143,6 +152,11 @@ void FutabaVfdM202MD10C::defineUserCharacter(Character charNumber, const uint8_t
         m_pStream->write(data[i]);
     }
     m_pStream->write(static_cast<uint8_t>(0x0));
+}
+
+void FutabaVfdM202MD10C::resetLocalDisplayState()
+{
+    m_bVerticalScroll = true;
 }
 
 void FutabaVfdM202MD10C::toggleExtendedMode(bool status)
