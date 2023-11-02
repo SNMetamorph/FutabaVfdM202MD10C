@@ -69,6 +69,7 @@ void FutabaVfdM202MD10C::clear()
     }
     m_pStream->write('\n');
     m_pStream->write('\n');
+    m_pStream->write('\n');
     m_pStream->write(ProtocolCommands::DisplayPosition);
     m_pStream->write(static_cast<uint8_t>(0x0));
     if (!m_bVerticalScroll) {
